@@ -1,3 +1,5 @@
+// Worked with Rhea Reyes 
+
 // Array for hours
 var displayTime = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM']
 
@@ -34,15 +36,14 @@ function renderPage() {
         } else {
             $(`#hour-${i}`).addClass('future');
         }
+        // Save button is clicked, typed notes saved to local storage.
+        $('.saveBtn').on('click', function () {
+            var input = $(`hour-${i}`).attr(`${displayTime[i - 9]}`);
+            var output = $(this).siblings('textarea').val();
+            localStorage.setItem(input, output);
+        });
     }
-    // Save button is clicked, typed notes saved to local storage.
-    $('.saveBtn').on('click', function () {
-        var input = $(`#hour-$`).attr(`${displayTime[i - 9]}`);
-        var output = $(this).siblings('textarea').val();
-        localStorage.setItem(input, output);
-    });
-    var input = `${displayTime[i - 9]}`;
-    localStorage.getItem(input);
+
 }
 // Call function to display structure of page
 renderPage();
