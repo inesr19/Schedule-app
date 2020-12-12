@@ -6,6 +6,8 @@ The purpose of this project was to create a scheduler that displayed each busine
 
 ### Screenshot
 
+![scheduler page screenshot](https://github.com/inesr19/Schedule-app/blob/main/Assets/Images/scheduler-app.png)
+
 ### Changes Made - Javascript Source Code
 
 ### Link
