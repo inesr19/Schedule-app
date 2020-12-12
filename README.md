@@ -10,7 +10,7 @@ The purpose of this project was to create a scheduler that displayed each busine
 
 ### Changes Made - Javascript Source Code
 
-1. Added a function to display the current date using moment.js and the give html.
+1. Added a function to display the current date using moment.js and the given html.
 2. Added an array with strings of business hours and set it equal to a variable.
 3. Created a function to render the page’s structure and formatting.
 4. Created a for loop inside the function to display rows, columns, & other features using the given css file.
