@@ -9,12 +9,22 @@ function displayDate() {
 // Call function to display the current date
 displayDate();
 
-// Call function to display the current date
-
 // Function to display scheduler structure and format
-
+function renderPage() {
 // For loop to display css structure for the columns and rows.
-
+for (let i = 9; i < 18; i++) {
+    $('<div>', {
+        id: `hour-${i}`,
+        class: 'row time-block past'
+    }).append($('<div>', {
+        class: 'col-md-1 hour',
+        text: `${displayTime[i - 9]}`
+    })).append($('<textarea>', {
+        class: 'col-md-10 description'
+    })).append($('<button>', {
+        class: 'button saveBtn col-md-1',
+        text: 'Save'
+    })).appendTo('.container');
 // Textarea color transition for past, present, and future hours (grabs variable using template literals).
 
 // Call function to display structure of page
