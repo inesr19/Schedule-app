@@ -9,9 +9,6 @@ function displayDate() {
 // Call function to display the current date
 displayDate();
 
-
-
-
 // Function to display scheduler structure and format
 function renderPage() {
     // For loop to display css structure for the columns and rows.
@@ -34,8 +31,8 @@ function renderPage() {
             var input = `${displayTime[i - 9]}`;
             var output = $(this).siblings('textarea').val();
             localStorage.setItem(input, output);
-
         });
+        
         // Textarea color transition for past, present, and future hours (grabs variable using template literals).
         if (moment().format('H') == i) {
             $(`#hour-${i}`).addClass('present');
@@ -44,6 +41,7 @@ function renderPage() {
         } else {
             $(`#hour-${i}`).addClass('future');
         }
+
         var input = `${displayTime[i - 9]}`;
         localStorage.getItem(input);
     }
