@@ -25,10 +25,17 @@ for (let i = 9; i < 18; i++) {
         class: 'button saveBtn col-md-1',
         text: 'Save'
     })).appendTo('.container');
+
 // Textarea color transition for past, present, and future hours (grabs variable using template literals).
-
+ if (moment().format('H') == i) {
+            $(`#hour-${i}`).addClass('present');
+        } else if (moment().format('H') > i) {
+            $(`#hour-${i}`).addClass('past');
+        } else {
+            $(`#hour-${i}`).addClass('future');
+        }
 // Call function to display structure of page
-
+    }
 // Save button is clicked, typed notes saved to local storage.
-
-
+    
+}
