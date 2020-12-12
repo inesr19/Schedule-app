@@ -20,3 +20,5 @@ The purpose of this project was to create a scheduler that displayed each busine
 8. Called the entire function so that all of the additions would display on the page.
 
 ### Link
+
+<https://inesr19.github.io/Schedule-app/>
