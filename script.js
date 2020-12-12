@@ -37,10 +37,12 @@ function renderPage() {
             $(`#hour-${i}`).addClass('future');
         }
         // Save button is clicked, typed notes saved to local storage.
-        $('.saveBtn').on('click', function () {
-            var input = $(`hour-${i}`).attr(`${displayTime[i - 9]}`);
+        $('.button').on('click', function () {
+            var input = `${displayTime[i-9]}`;
             var output = $(this).siblings('textarea').val();
             localStorage.setItem(input, output);
+
+            localStorage.getItem(input);
         });
     }
 
