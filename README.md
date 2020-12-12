@@ -10,4 +10,13 @@ The purpose of this project was to create a scheduler that displayed each busine
 
 ### Changes Made - Javascript Source Code
 
+1. Added a function to display the current date using moment.js and the give html.
+2. Added an array with strings of business hours and set it equal to a variable.
+3. Created a function to render the page’s structure and formatting.
+4. Created a for loop inside the function to display rows, columns, & other features using the given css file.
+5. Added a local storage to save notes when the save button has been clicked (‘click’ function).
+6. Added if, else if, and else statements to correlate the current time with the appropriate textarea color that it should be according to the css file.
+7. Included a localStorage.getItem() to get the appropriate value for the set key.
+8. Called the entire function so that all of the additions would display on the page.
+
 ### Link
