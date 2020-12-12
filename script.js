@@ -1,13 +1,13 @@
-// Array for hours
-var displayTime = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM']
-
-// Display current date for the calendar
+// Display current date for the scheduler
 function displayDate() {
     var currentTime = moment().format("MMM Do YY");
     $('#currentDay').text(currentTime);
 }
 // Call function to display the current date
 displayDate();
+
+// Array for hours
+var displayTime = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM']
 
 // Function to display scheduler structure and format
 function renderPage() {
@@ -32,7 +32,7 @@ function renderPage() {
             var output = $(this).siblings('textarea').val();
             localStorage.setItem(input, output);
         });
-        
+
         // Textarea color transition for past, present, and future hours (grabs variable using template literals).
         if (moment().format('H') == i) {
             $(`#hour-${i}`).addClass('present');
@@ -42,6 +42,7 @@ function renderPage() {
             $(`#hour-${i}`).addClass('future');
         }
 
+        // Get value for key in local storage
         var input = `${displayTime[i - 9]}`;
         localStorage.getItem(input);
     }
